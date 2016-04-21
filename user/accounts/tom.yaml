@@ -1,0 +1,11 @@
+email: tom@miracl.com
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+fullname: 'Tomasz Matecki'
+title: 'Product Manager'
+state: enabled
+hashed_password: $2y$10$ZlDkL9Z.uFKlonU/Kk1e7O1fd6kiY0t792Iify1Ug.2P9OVYbQlQS
