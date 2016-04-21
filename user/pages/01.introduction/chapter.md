@@ -1,11 +1,9 @@
 ---
-title: MILAGRO MFA
+title: Introduction
 taxonomy:
     category: docs
 ---
 
-### MILAGRO MFA
+### MILAGRO Introduction
 
-# MILAGRO Multifactor Authentication
 
-Discover the **basic** principals of MILAGRO MFA
