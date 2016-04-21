@@ -1,51 +1,71 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1460542064,
-    'checksum' => '64d3b6cd0a42f3f420d623f5079ef8d5',
+    'timestamp' => 1461253039,
+    'checksum' => '99a714a521221949fd74f99b9ff81713',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ]
         ],
         'user/plugins' => [
-            'plugins/anchors' => [
-                'file' => 'user/plugins/anchors/blueprints.yaml',
-                'modified' => 1456410000
+            'plugins/admin' => [
+                'file' => 'user/plugins/admin/blueprints.yaml',
+                'modified' => 1456409950
             ],
-            'plugins/breadcrumbs' => [
-                'file' => 'user/plugins/breadcrumbs/blueprints.yaml',
-                'modified' => 1456410002
+            'plugins/email' => [
+                'file' => 'user/plugins/email/blueprints.yaml',
+                'modified' => 1461251188
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1456410002
+                'modified' => 1456409950
             ],
-            'plugins/highlight' => [
-                'file' => 'user/plugins/highlight/blueprints.yaml',
-                'modified' => 1456410004
+            'plugins/form' => [
+                'file' => 'user/plugins/form/blueprints.yaml',
+                'modified' => 1456409950
+            ],
+            'plugins/ganalytics' => [
+                'file' => 'user/plugins/ganalytics/blueprints.yaml',
+                'modified' => 1461252285
+            ],
+            'plugins/langswitcher' => [
+                'file' => 'user/plugins/langswitcher/blueprints.yaml',
+                'modified' => 1461252353
+            ],
+            'plugins/login' => [
+                'file' => 'user/plugins/login/blueprints.yaml',
+                'modified' => 1456409950
+            ],
+            'plugins/markdown-color' => [
+                'file' => 'user/plugins/markdown-color/blueprints.yaml',
+                'modified' => 1461252433
+            ],
+            'plugins/mathjax' => [
+                'file' => 'user/plugins/mathjax/blueprints.yaml',
+                'modified' => 1461252309
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1456410006
+                'modified' => 1456409950
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1456410006
+                'modified' => 1461252387
             ]
         ]
     ],
@@ -55,12 +75,18 @@ return [
                 'type' => '_parent',
                 'name' => 'plugins'
             ],
-            'plugins.anchors' => [
+            'plugins.admin' => [
                 'type' => '_parent',
-                'name' => 'plugins.anchors'
+                'name' => 'plugins.admin'
             ],
-            'plugins.anchors.enabled' => [
-                'type' => 'toggle',
+            'plugins.admin.Basics' => [
+                'type' => 'section',
+                'title' => 'Basics',
+                'underline' => false,
+                'name' => 'plugins.admin.Basics'
+            ],
+            'plugins.admin.enabled' => [
+                'type' => 'hidden',
                 'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
                 'highlight' => 1,
                 'default' => 0,
@@ -71,11 +97,37 @@ return [
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.anchors.enabled'
+                'name' => 'plugins.admin.enabled'
             ],
-            'plugins.anchors.active' => [
+            'plugins.admin.route' => [
+                'type' => 'text',
+                'label' => 'Administrator path',
+                'size' => 'medium',
+                'placeholder' => 'Default route for administrator (relative to base)',
+                'help' => 'If you want to change the URL for the administrator, you can provide a path here',
+                'name' => 'plugins.admin.route'
+            ],
+            'plugins.admin.theme' => [
+                'type' => 'hidden',
+                'label' => 'Theme',
+                'default' => 'grav',
+                'name' => 'plugins.admin.theme'
+            ],
+            'plugins.admin.edit_mode' => [
+                'type' => 'select',
+                'label' => 'Edit mode',
+                'size' => 'small',
+                'default' => 'normal',
+                'options' => [
+                    'normal' => 'Normal',
+                    'expert' => 'Expert'
+                ],
+                'help' => 'Auto will use blueprint if available, if none found, it will use "Expert" mode.',
+                'name' => 'plugins.admin.edit_mode'
+            ],
+            'plugins.admin.google_fonts' => [
                 'type' => 'toggle',
-                'label' => 'Active',
+                'label' => 'Use Google Fonts',
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
@@ -85,145 +137,304 @@ return [
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'help' => 'Activate for all pages. If disabled then you must activate per-page',
-                'name' => 'plugins.anchors.active'
+                'help' => 'Use Google custom fonts.  Disable this to use Helvetica. Useful when using Cyrillic and other languages with unsupported characters.',
+                'name' => 'plugins.admin.google_fonts'
             ],
-            'plugins.anchors.selectors' => [
-                'type' => 'text',
-                'label' => 'Selectors',
-                'size' => 'large',
-                'default' => 'h1,h2,h3,h4',
-                'placeholder' => 'Anchor Selectors',
-                'help' => 'Comma separated list of header selectors to activate on',
-                'name' => 'plugins.anchors.selectors'
+            'plugins.admin.show_beta_msg' => [
+                'type' => 'hidden',
+                'name' => 'plugins.admin.show_beta_msg'
             ],
-            'plugins.anchors.placement' => [
-                'type' => 'select',
-                'label' => 'Placement',
-                'classes' => 'fancy',
-                'help' => 'Either `left` or `right`',
-                'default' => 'right',
+            'plugins.admin.show_github_msg' => [
+                'type' => 'toggle',
+                'label' => 'Show GitHub Link',
+                'highlight' => 1,
+                'default' => 1,
                 'options' => [
-                    'left' => 'left',
-                    'right' => 'right'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
-                'name' => 'plugins.anchors.placement'
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'help' => 'Show the "Found an issue? Please report it on GitHub." message.',
+                'name' => 'plugins.admin.show_github_msg'
             ],
-            'plugins.anchors.visible' => [
-                'type' => 'select',
-                'label' => 'Visible',
-                'classes' => 'fancy',
-                'help' => 'Hover activates on `hover` else will always display',
-                'default' => 'hover',
+            'plugins.admin.enable_auto_updates_check' => [
+                'type' => 'toggle',
+                'label' => 'Automatically check for updates',
+                'highlight' => 1,
+                'default' => 1,
                 'options' => [
-                    'hover' => 'hover',
-                    'always' => 'always'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
-                'name' => 'plugins.anchors.visible'
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'help' => 'Shows an informative message, in the admin panel, when an update is available.',
+                'name' => 'plugins.admin.enable_auto_updates_check'
             ],
-            'plugins.anchors.icon' => [
-                'type' => 'text',
-                'label' => 'Icon',
-                'size' => 'medium',
-                'default' => '',
-                'help' => 'Replace the default link icon with the character(s) provided, e.g. #, ¶, ❡ or §',
-                'name' => 'plugins.anchors.icon'
-            ],
-            'plugins.anchors.class' => [
-                'type' => 'text',
-                'label' => 'Class',
-                'size' => 'medium',
-                'default' => '',
-                'help' => 'Adds the provided class to the anchor html',
-                'name' => 'plugins.anchors.class'
-            ],
-            'plugins.breadcrumbs' => [
+            'plugins.admin.session' => [
                 'type' => '_parent',
-                'name' => 'plugins.breadcrumbs'
+                'name' => 'plugins.admin.session'
             ],
-            'plugins.breadcrumbs.enabled' => [
+            'plugins.admin.session.timeout' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'Session Timeout',
+                'help' => 'Sets the session timeout in seconds',
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 1
+                ],
+                'name' => 'plugins.admin.session.timeout'
+            ],
+            'plugins.admin.warnings' => [
+                'type' => '_parent',
+                'name' => 'plugins.admin.warnings'
+            ],
+            'plugins.admin.warnings.delete_page' => [
                 'type' => 'toggle',
-                'label' => 'Plugin status',
+                'label' => 'Warn on page delete',
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.breadcrumbs.enabled'
+                'help' => 'Ask the user confirmation when deleting a page',
+                'name' => 'plugins.admin.warnings.delete_page'
             ],
-            'plugins.breadcrumbs.show_all' => [
+            'plugins.admin.Popularity' => [
+                'type' => 'section',
+                'title' => 'Popularity',
+                'underline' => true,
+                'name' => 'plugins.admin.Popularity'
+            ],
+            'plugins.admin.popularity' => [
+                'type' => '_parent',
+                'name' => 'plugins.admin.popularity'
+            ],
+            'plugins.admin.popularity.enabled' => [
                 'type' => 'toggle',
-                'label' => 'Show even with one item',
+                'label' => 'Visitor tracking',
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.breadcrumbs.show_all'
+                'help' => 'Enable the visitors stats collecting feature',
+                'name' => 'plugins.admin.popularity.enabled'
             ],
-            'plugins.breadcrumbs.built_in_css' => [
-                'type' => 'toggle',
-                'label' => 'Use built in CSS',
+            'plugins.admin.dashboard' => [
+                'type' => '_parent',
+                'name' => 'plugins.admin.dashboard'
+            ],
+            'plugins.admin.dashboard.days_of_stats' => [
+                'type' => 'text',
+                'label' => 'Days of stats',
+                'size' => 'x-small',
+                'default' => 7,
+                'help' => 'Keep stats for the specified number of days, then drop them',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.admin.dashboard.days_of_stats'
+            ],
+            'plugins.admin.popularity.ignore' => [
+                'type' => 'array',
+                'label' => 'Ignore',
+                'size' => 'large',
+                'help' => 'URLs to ignore',
+                'default' => [
+                    0 => '/test*',
+                    1 => '/modular'
+                ],
+                'value_only' => true,
+                'placeholder_value' => '/ignore-this-route',
+                'name' => 'plugins.admin.popularity.ignore'
+            ],
+            'plugins.admin.popularity.history' => [
+                'type' => '_parent',
+                'name' => 'plugins.admin.popularity.history'
+            ],
+            'plugins.admin.popularity.history.daily' => [
+                'type' => 'hidden',
+                'label' => 'Daily history',
+                'default' => 30,
+                'name' => 'plugins.admin.popularity.history.daily'
+            ],
+            'plugins.admin.popularity.history.monthly' => [
+                'type' => 'hidden',
+                'label' => 'Monthly history',
+                'default' => 12,
+                'name' => 'plugins.admin.popularity.history.monthly'
+            ],
+            'plugins.admin.popularity.history.visitors' => [
+                'type' => 'hidden',
+                'label' => 'Visitors history',
+                'default' => 20,
+                'name' => 'plugins.admin.popularity.history.visitors'
+            ],
+            'plugins.email' => [
+                'type' => '_parent',
+                'name' => 'plugins.email'
+            ],
+            'plugins.email.enabled' => [
+                'type' => 'hidden',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.breadcrumbs.built_in_css'
+                'name' => 'plugins.email.enabled'
             ],
-            'plugins.breadcrumbs.include_home' => [
-                'type' => 'toggle',
-                'label' => 'Include Home',
-                'highlight' => 1,
-                'default' => 1,
+            'plugins.email.mailer' => [
+                'type' => '_parent',
+                'name' => 'plugins.email.mailer'
+            ],
+            'plugins.email.mailer.engine' => [
+                'type' => 'select',
+                'label' => 'Mail Engine',
+                'size' => 'medium',
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    'none' => 'Disabled',
+                    'smtp' => 'SMTP',
+                    'sendmail' => 'Sendmail',
+                    'mail' => 'PHP Mail'
                 ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'plugins.breadcrumbs.include_home'
+                'name' => 'plugins.email.mailer.engine'
             ],
-            'plugins.breadcrumbs.icon_home' => [
+            'plugins.email.content_type' => [
+                'type' => 'select',
+                'label' => 'Content type',
+                'size' => 'medium',
+                'default' => 'text/html',
+                'options' => [
+                    'text/plain' => 'Plain text',
+                    'text/html' => 'HTML'
+                ],
+                'name' => 'plugins.email.content_type'
+            ],
+            'plugins.email.from' => [
+                'type' => 'email',
+                'size' => 'medium',
+                'label' => 'Email from',
+                'placeholder' => 'Default email from address',
+                'validate' => [
+                    'required' => true,
+                    'type' => 'email'
+                ],
+                'name' => 'plugins.email.from'
+            ],
+            'plugins.email.from_name' => [
                 'type' => 'text',
                 'size' => 'medium',
-                'label' => 'Icon Home',
-                'default' => '',
-                'name' => 'plugins.breadcrumbs.icon_home'
+                'label' => 'Email from name',
+                'placeholder' => 'Default email from name',
+                'name' => 'plugins.email.from_name'
             ],
-            'plugins.breadcrumbs.icon_divider_classes' => [
+            'plugins.email.to' => [
+                'type' => 'email',
+                'size' => 'medium',
+                'label' => 'Email to',
+                'placeholder' => 'Default email to address',
+                'validate' => [
+                    'required' => true,
+                    'type' => 'email'
+                ],
+                'name' => 'plugins.email.to'
+            ],
+            'plugins.email.to_name' => [
                 'type' => 'text',
                 'size' => 'medium',
-                'label' => 'Icon Divider Classes',
-                'default' => 'fa fa-angle-right',
-                'name' => 'plugins.breadcrumbs.icon_divider_classes'
+                'label' => 'Email to name',
+                'placeholder' => 'Default email to name',
+                'name' => 'plugins.email.to_name'
             ],
-            'plugins.breadcrumbs.link_trailing' => [
+            'plugins.email.mailer.smtp' => [
+                'type' => '_parent',
+                'name' => 'plugins.email.mailer.smtp'
+            ],
+            'plugins.email.mailer.smtp.server' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'SMTP server',
+                'placeholder' => 'e.g. smtp.google.com',
+                'name' => 'plugins.email.mailer.smtp.server'
+            ],
+            'plugins.email.mailer.smtp.port' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'SMTP port',
+                'placeholder' => 'Defaults to 25 (plaintext) / 587 (encrypted)',
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 1,
+                    'max' => 65535
+                ],
+                'name' => 'plugins.email.mailer.smtp.port'
+            ],
+            'plugins.email.mailer.smtp.encryption' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'label' => 'SMTP encryption',
+                'options' => [
+                    'none' => 'None',
+                    'ssl' => 'SSL',
+                    'tls' => 'TLS',
+                    'starttls' => 'STARTTLS'
+                ],
+                'name' => 'plugins.email.mailer.smtp.encryption'
+            ],
+            'plugins.email.mailer.smtp.user' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'SMTP login name',
+                'name' => 'plugins.email.mailer.smtp.user'
+            ],
+            'plugins.email.mailer.smtp.password' => [
+                'type' => 'password',
+                'size' => 'medium',
+                'label' => 'SMTP password',
+                'name' => 'plugins.email.mailer.smtp.password'
+            ],
+            'plugins.email.mailer.sendmail' => [
+                'type' => '_parent',
+                'name' => 'plugins.email.mailer.sendmail'
+            ],
+            'plugins.email.mailer.sendmail.bin' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Path to sendmail',
+                'placeholder' => '/usr/sbin/sendmail',
+                'name' => 'plugins.email.mailer.sendmail.bin'
+            ],
+            'plugins.email.debug' => [
                 'type' => 'toggle',
-                'label' => 'Link Trailing',
+                'label' => 'Debug',
                 'highlight' => 1,
                 'default' => 0,
                 'options' => [
-                    1 => 'Enabled',
-                    0 => 'Disabled'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.breadcrumbs.link_trailing'
+                'name' => 'plugins.email.debug'
             ],
             'plugins.error' => [
                 'type' => '_parent',
@@ -231,12 +442,12 @@ return [
             ],
             'plugins.error.enabled' => [
                 'type' => 'toggle',
-                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'label' => 'Plugin status',
                 'highlight' => 1,
                 'default' => 0,
                 'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
+                    1 => 'Enabled',
+                    0 => 'Disabled'
                 ],
                 'validate' => [
                     'type' => 'bool'
@@ -254,12 +465,12 @@ return [
                 'default' => '/error',
                 'name' => 'plugins.error.routes.404'
             ],
-            'plugins.highlight' => [
+            'plugins.form' => [
                 'type' => '_parent',
-                'name' => 'plugins.highlight'
+                'name' => 'plugins.form'
             ],
-            'plugins.highlight.enabled' => [
-                'type' => 'toggle',
+            'plugins.form.enabled' => [
+                'type' => 'hidden',
                 'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
                 'highlight' => 1,
                 'default' => 0,
@@ -270,68 +481,655 @@ return [
                 'validate' => [
                     'type' => 'bool'
                 ],
-                'name' => 'plugins.highlight.enabled'
+                'name' => 'plugins.form.enabled'
             ],
-            'plugins.highlight.theme' => [
-                'type' => 'select',
-                'label' => 'CSS Theme',
-                'default' => 'default',
+            'plugins.form.files' => [
+                'type' => '_parent',
+                'name' => 'plugins.form.files'
+            ],
+            'plugins.form.files.multiple' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_FORM.ALLOW_MULTIPLE',
+                'help' => 'PLUGIN_FORM.ALLOW_MULTIPLE_HELP',
+                'highlight' => 1,
+                'default' => 0,
                 'options' => [
-                    'default' => 'Default',
-                    'monokai' => 'Monakai',
-                    'learn' => 'Grav Learn',
-                    'railscasts' => 'Railscasts',
-                    'arta' => 'Arta',
-                    'ascetic' => 'Ascetic',
-                    'brown-paper' => 'Brown Paper',
-                    'atelier-dune.dark' => 'Atelier Dune Dark',
-                    'atelier-dune.light' => 'Atelier Dune Light',
-                    'atelier-forest.dark' => 'Atelier Forest Dark',
-                    'atelier-forest.light' => 'Atelier Forest Light',
-                    'atelier-heath.dark' => 'Atelier Heath Dark',
-                    'atelier-heath.light' => 'Atelier Heath Light',
-                    'atelier-lakeside.dark' => 'Atelier Lakeside Dark',
-                    'atelier-lakeside.light' => 'Atelier Lakeside Light',
-                    'atelier-seaside.dark' => 'Atelier Seaside Dark',
-                    'atelier-seaside.light' => 'Atelier Seaside Light',
-                    'brown_paper' => 'Brown Paper',
-                    'codepen-embed' => 'Codepen Embed',
-                    'color-brewer' => 'Color Brewer',
-                    'dark' => 'Dark',
-                    'docco' => 'Docco',
-                    'far' => 'Far',
-                    'foundation' => 'Foundation',
-                    'github' => 'Github',
-                    'googlecode' => 'GoogleCode',
-                    'grayscale' => 'Grayscale',
-                    'hopscotch' => 'Hopscotch',
-                    'hybrid' => 'Hybrid',
-                    'idea' => 'Idea',
-                    'ir-black' => 'IR-Black',
-                    'kimbie.dark' => 'Kimbie Dark',
-                    'kimbie.light' => 'Kimbie Light',
-                    'magula' => 'Magula',
-                    'mono-blue' => 'Mono Blue',
-                    'monokai-sublime' => 'Monokai Sublime',
-                    'obsidian' => 'Obsidian',
-                    'paraiso-dark' => 'Paraiso Dark',
-                    'paraiso-light' => 'Paraiso Light',
-                    'pojoaque' => 'Pojoaque',
-                    'rainbow' => 'Rainbow',
-                    'school-book' => 'School Book',
-                    'solarized-dark' => 'Solarized Dark',
-                    'solarized-light' => 'Solarized Light',
-                    'sunburst' => 'Sunburst',
-                    'tomorrow-night-blue' => 'Tomorrow Night Blue',
-                    'tomorrow-night-bright' => 'Tomorrow Night Bright',
-                    'tomorrow-night-eighties' => 'Tomorrow Night Eighties',
-                    'tomorrow-night' => 'Tomorrow Night',
-                    'tomorrow' => 'Tomorrow',
-                    'vs' => 'VS',
-                    'xcode' => 'XCode',
-                    'zenburn' => 'Zenburn'
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
                 ],
-                'name' => 'plugins.highlight.theme'
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.form.files.multiple'
+            ],
+            'plugins.form.files.destination' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_FORM.DESTINATION',
+                'help' => 'PLUGIN_FORM.DESTINATION_HELP',
+                'default' => '@self',
+                'name' => 'plugins.form.files.destination'
+            ],
+            'plugins.form.files.accept' => [
+                'type' => 'selectize',
+                'size' => 'large',
+                'label' => 'PLUGIN_FORM.ACCEPT',
+                'help' => 'PLUGIN_FORM.ACCEPT_HELP',
+                'classes' => 'fancy',
+                'default' => [
+                    0 => 'image/*'
+                ],
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.form.files.accept'
+            ],
+            'plugins.ganalytics' => [
+                'type' => '_parent',
+                'name' => 'plugins.ganalytics'
+            ],
+            'plugins.ganalytics.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin Status',
+                'hightlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.ganalytics.enabled'
+            ],
+            'plugins.ganalytics.trackingId' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'Tracking ID',
+                'placeholder' => 'UA-...',
+                'help' => 'Google Analytics tracking ID. In format UA-00000000-0.',
+                'name' => 'plugins.ganalytics.trackingId'
+            ],
+            'plugins.langswitcher' => [
+                'type' => '_parent',
+                'name' => 'plugins.langswitcher'
+            ],
+            'plugins.langswitcher.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.langswitcher.enabled'
+            ],
+            'plugins.langswitcher.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'Use built in CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.langswitcher.built_in_css'
+            ],
+            'plugins.login' => [
+                'type' => '_parent',
+                'name' => 'plugins.login'
+            ],
+            'plugins.login.enabled' => [
+                'type' => 'hidden',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.enabled'
+            ],
+            'plugins.login.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.BUILTIN_CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'help' => 'PLUGIN_LOGIN.BUILTIN_CSS_HELP',
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.built_in_css'
+            ],
+            'plugins.login.route' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'PLUGIN_LOGIN.ROUTE',
+                'help' => 'PLUGIN_LOGIN.ROUTE_HELP',
+                'placeholder' => '/my-custom-login',
+                'name' => 'plugins.login.route'
+            ],
+            'plugins.login.redirect' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGIN',
+                'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_LOGIN_HELP',
+                'placeholder' => '/my-page',
+                'name' => 'plugins.login.redirect'
+            ],
+            'plugins.login.parent_acl' => [
+                'type' => 'toggle',
+                'label' => 'Use parent access rules',
+                'highlight' => 1,
+                'default' => 0,
+                'help' => 'Check for parent access rules if no rules are defined',
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.parent_acl'
+            ],
+            'plugins.login.rememberme' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.rememberme'
+            ],
+            'plugins.login.rememberme.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.ENABLED',
+                'help' => 'PLUGIN_ADMIN.SESSION_ENABLED_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.rememberme.enabled'
+            ],
+            'plugins.login.rememberme.timeout' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADMIN.TIMEOUT',
+                'help' => 'PLUGIN_ADMIN.TIMEOUT_HELP',
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 1
+                ],
+                'name' => 'plugins.login.rememberme.timeout'
+            ],
+            'plugins.login.rememberme.name' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADMIN.NAME',
+                'help' => 'PLUGIN_ADMIN.SESSION_NAME_HELP',
+                'name' => 'plugins.login.rememberme.name'
+            ],
+            'plugins.login.user_registration' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.user_registration'
+            ],
+            'plugins.login.user_registration.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.ENABLED',
+                'help' => 'PLUGIN_LOGIN.USER_REGISTRATION_ENABLED_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.enabled'
+            ],
+            'plugins.login.route_register' => [
+                'type' => 'text',
+                'size' => 'medium',
+                'label' => 'PLUGIN_LOGIN.ROUTE_REGISTER',
+                'help' => 'PLUGIN_LOGIN.ROUTE_REGISTER_HELP',
+                'placeholder' => '/register',
+                'name' => 'plugins.login.route_register'
+            ],
+            'plugins.login.user_registration.redirect_after_registration' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION',
+                'help' => 'PLUGIN_LOGIN.REDIRECT_AFTER_REGISTRATION_HELP',
+                'placeholder' => '/my-page',
+                'name' => 'plugins.login.user_registration.redirect_after_registration'
+            ],
+            'plugins.login.user_registration.fields' => [
+                'type' => 'array',
+                'value_only' => true,
+                'label' => 'PLUGIN_LOGIN.REGISTRATION_FIELDS',
+                'help' => 'PLUGIN_LOGIN.REGISTRATION_FIELDS_HELP',
+                'placeholder_key' => 'PLUGIN_LOGIN.REGISTRATION_FIELD_KEY',
+                'placeholder_value' => 'PLUGIN_LOGIN.REGISTRATION_FIELD_VALUE',
+                'name' => 'plugins.login.user_registration.fields'
+            ],
+            'plugins.login.user_registration.default_values' => [
+                'type' => 'array',
+                'label' => 'PLUGIN_LOGIN.DEFAULT_VALUES',
+                'help' => 'PLUGIN_LOGIN.DEFAULT_VALUES_HELP',
+                'placeholder_key' => 'PLUGIN_LOGIN.ADDITIONAL_PARAM_KEY',
+                'placeholder_value' => 'PLUGIN_LOGIN.ADDITIONAL_PARAM_VALUE',
+                'name' => 'plugins.login.user_registration.default_values'
+            ],
+            'plugins.login.user_registration.options' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.user_registration.options'
+            ],
+            'plugins.login.user_registration.options.validate_password1_and_password2' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.VALIDATE_PASSWORD1_AND_PASSWORD2',
+                'help' => 'PLUGIN_LOGIN.VALIDATE_PASSWORD1_AND_PASSWORD2_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.validate_password1_and_password2'
+            ],
+            'plugins.login.user_registration.options.set_user_disabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.SET_USER_DISABLED',
+                'help' => 'PLUGIN_LOGIN.SET_USER_DISABLED_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.set_user_disabled'
+            ],
+            'plugins.login.user_registration.options.login_after_registration' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.LOGIN_AFTER_REGISTRATION',
+                'help' => 'PLUGIN_LOGIN.LOGIN_AFTER_REGISTRATION_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.login_after_registration'
+            ],
+            'plugins.login.user_registration.options.send_activation_email' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.SEND_ACTIVATION_EMAIL',
+                'help' => 'PLUGIN_LOGIN.SEND_ACTIVATION_EMAIL_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.send_activation_email'
+            ],
+            'plugins.login.user_registration.options.send_notification_email' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.SEND_NOTIFICATION_EMAIL',
+                'help' => 'PLUGIN_LOGIN.SEND_NOTIFICATION_EMAIL_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.send_notification_email'
+            ],
+            'plugins.login.user_registration.options.send_welcome_email' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.SEND_WELCOME_EMAIL',
+                'help' => 'PLUGIN_LOGIN.SEND_WELCOME_EMAIL_HELP',
+                'highlight' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.user_registration.options.send_welcome_email'
+            ],
+            'plugins.login.oauth' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth'
+            ],
+            'plugins.login.oauth.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_ENABLE',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.enabled'
+            ],
+            'plugins.login.oauth.user' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.user'
+            ],
+            'plugins.login.oauth.user.autocreate' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_USER_AUTOCREATE',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.user.autocreate'
+            ],
+            'plugins.login.oauth.user.access' => [
+                'type' => 'array',
+                'label' => 'PLUGIN_LOGIN.OAUTH_ACCESS',
+                'placeholder_key' => 'signin.login',
+                'placeholder_value' => true,
+                'name' => 'plugins.login.oauth.user.access'
+            ],
+            'plugins.login.oauth.providers' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers'
+            ],
+            'plugins.login.oauth.providers.Facebook' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Facebook'
+            ],
+            'plugins.login.oauth.providers.Facebook.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_PROVIDER_FACEBOOK',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.providers.Facebook.enabled'
+            ],
+            'plugins.login.oauth.providers.Facebook.credentials' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Facebook.credentials'
+            ],
+            'plugins.login.oauth.providers.Facebook.credentials.key' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_ID',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Facebook.credentials.key'
+            ],
+            'plugins.login.oauth.providers.Facebook.credentials.secret' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_SECRET',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Facebook.credentials.secret'
+            ],
+            'plugins.login.oauth.providers.Google' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Google'
+            ],
+            'plugins.login.oauth.providers.Google.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_PROVIDER_GOOGLE',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.providers.Google.enabled'
+            ],
+            'plugins.login.oauth.providers.Google.credentials' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Google.credentials'
+            ],
+            'plugins.login.oauth.providers.Google.credentials.key' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_ID',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Google.credentials.key'
+            ],
+            'plugins.login.oauth.providers.Google.credentials.secret' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_SECRET',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Google.credentials.secret'
+            ],
+            'plugins.login.oauth.providers.GitHub' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.GitHub'
+            ],
+            'plugins.login.oauth.providers.GitHub.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_PROVIDER_GITHUB',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.providers.GitHub.enabled'
+            ],
+            'plugins.login.oauth.providers.GitHub.credentials' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.GitHub.credentials'
+            ],
+            'plugins.login.oauth.providers.GitHub.credentials.key' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_ID',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.GitHub.credentials.key'
+            ],
+            'plugins.login.oauth.providers.GitHub.credentials.secret' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_SECRET',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.GitHub.credentials.secret'
+            ],
+            'plugins.login.oauth.providers.Twitter' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Twitter'
+            ],
+            'plugins.login.oauth.providers.Twitter.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_LOGIN.OAUTH_PROVIDER_TWITTER',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.login.oauth.providers.Twitter.enabled'
+            ],
+            'plugins.login.oauth.providers.Twitter.credentials' => [
+                'type' => '_parent',
+                'name' => 'plugins.login.oauth.providers.Twitter.credentials'
+            ],
+            'plugins.login.oauth.providers.Twitter.credentials.key' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_ID',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Twitter.credentials.key'
+            ],
+            'plugins.login.oauth.providers.Twitter.credentials.secret' => [
+                'type' => 'text',
+                'label' => 'PLUGIN_LOGIN.OAUTH_CLIENT_SECRET',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.login.oauth.providers.Twitter.credentials.secret'
+            ],
+            'plugins.markdown-color' => [
+                'type' => '_parent',
+                'name' => 'plugins.markdown-color'
+            ],
+            'plugins.markdown-color.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.markdown-color.enabled'
+            ],
+            'plugins.mathjax' => [
+                'type' => '_parent',
+                'name' => 'plugins.mathjax'
+            ],
+            'plugins.mathjax.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.MATHJAX.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.mathjax.enabled'
+            ],
+            'plugins.mathjax.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.MATHJAX.BUILTIN_CSS',
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.mathjax.built_in_css'
+            ],
+            'plugins.mathjax.built_in_js' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.MATHJAX.BUILTIN_JS',
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.mathjax.built_in_js'
+            ],
+            'plugins.mathjax.weight' => [
+                'type' => 'text',
+                'size' => 'x-small',
+                'label' => 'PLUGINS.MATHJAX.WEIGHT',
+                'default' => -5,
+                'help' => 'PLUGINS.MATHJAX.WEIGHT_HELP',
+                'validate' => [
+                    'type' => 'int',
+                    'min' => -100,
+                    'max' => 100
+                ],
+                'name' => 'plugins.mathjax.weight'
+            ],
+            'plugins.mathjax.CDN' => [
+                'type' => '_parent',
+                'name' => 'plugins.mathjax.CDN'
+            ],
+            'plugins.mathjax.CDN.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.MATHJAX.CDN.ENABLED',
+                'help' => 'PLUGINS.MATHJAX.CDN.ENABLED_HELP',
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.mathjax.CDN.enabled'
+            ],
+            'plugins.mathjax.CDN.url' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.MATHJAX.CDN.URL',
+                'default' => 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+                'placeholder' => 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML',
+                'help' => 'PLUGINS.MATHJAX.CDN.URL_HELP',
+                'name' => 'plugins.mathjax.CDN.url'
+            ],
+            'plugins.mathjax.process' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.MATHJAX.PROCESS',
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.mathjax.process'
             ],
             'plugins.problems' => [
                 'type' => '_parent',
@@ -339,12 +1137,12 @@ return [
             ],
             'plugins.problems.enabled' => [
                 'type' => 'toggle',
-                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'label' => 'Plugin status',
                 'highlight' => 1,
                 'default' => 0,
                 'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
+                    1 => 'Enabled',
+                    0 => 'Disabled'
                 ],
                 'validate' => [
                     'type' => 'bool'
@@ -357,8 +1155,8 @@ return [
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
+                    1 => 'Enabled',
+                    0 => 'Disabled'
                 ],
                 'validate' => [
                     'type' => 'bool'
@@ -371,12 +1169,12 @@ return [
             ],
             'plugins.simplesearch.enabled' => [
                 'type' => 'toggle',
-                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'label' => 'Plugin status',
                 'highlight' => 1,
                 'default' => 0,
                 'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
+                    1 => 'Enabled',
+                    0 => 'Disabled'
                 ],
                 'validate' => [
                     'type' => 'bool'
@@ -389,8 +1187,8 @@ return [
                 'highlight' => 1,
                 'default' => 1,
                 'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
+                    1 => 'Enabled',
+                    0 => 'Disabled'
                 ],
                 'validate' => [
                     'type' => 'bool'
@@ -1708,23 +2506,57 @@ return [
         ],
         'nested' => [
             'plugins' => [
-                'anchors' => [
-                    'enabled' => 'plugins.anchors.enabled',
-                    'active' => 'plugins.anchors.active',
-                    'selectors' => 'plugins.anchors.selectors',
-                    'placement' => 'plugins.anchors.placement',
-                    'visible' => 'plugins.anchors.visible',
-                    'icon' => 'plugins.anchors.icon',
-                    'class' => 'plugins.anchors.class'
+                'admin' => [
+                    'Basics' => 'plugins.admin.Basics',
+                    'enabled' => 'plugins.admin.enabled',
+                    'route' => 'plugins.admin.route',
+                    'theme' => 'plugins.admin.theme',
+                    'edit_mode' => 'plugins.admin.edit_mode',
+                    'google_fonts' => 'plugins.admin.google_fonts',
+                    'show_beta_msg' => 'plugins.admin.show_beta_msg',
+                    'show_github_msg' => 'plugins.admin.show_github_msg',
+                    'enable_auto_updates_check' => 'plugins.admin.enable_auto_updates_check',
+                    'session' => [
+                        'timeout' => 'plugins.admin.session.timeout'
+                    ],
+                    'warnings' => [
+                        'delete_page' => 'plugins.admin.warnings.delete_page'
+                    ],
+                    'Popularity' => 'plugins.admin.Popularity',
+                    'popularity' => [
+                        'enabled' => 'plugins.admin.popularity.enabled',
+                        'ignore' => 'plugins.admin.popularity.ignore',
+                        'history' => [
+                            'daily' => 'plugins.admin.popularity.history.daily',
+                            'monthly' => 'plugins.admin.popularity.history.monthly',
+                            'visitors' => 'plugins.admin.popularity.history.visitors'
+                        ]
+                    ],
+                    'dashboard' => [
+                        'days_of_stats' => 'plugins.admin.dashboard.days_of_stats'
+                    ]
                 ],
-                'breadcrumbs' => [
-                    'enabled' => 'plugins.breadcrumbs.enabled',
-                    'show_all' => 'plugins.breadcrumbs.show_all',
-                    'built_in_css' => 'plugins.breadcrumbs.built_in_css',
-                    'include_home' => 'plugins.breadcrumbs.include_home',
-                    'icon_home' => 'plugins.breadcrumbs.icon_home',
-                    'icon_divider_classes' => 'plugins.breadcrumbs.icon_divider_classes',
-                    'link_trailing' => 'plugins.breadcrumbs.link_trailing'
+                'email' => [
+                    'enabled' => 'plugins.email.enabled',
+                    'mailer' => [
+                        'engine' => 'plugins.email.mailer.engine',
+                        'smtp' => [
+                            'server' => 'plugins.email.mailer.smtp.server',
+                            'port' => 'plugins.email.mailer.smtp.port',
+                            'encryption' => 'plugins.email.mailer.smtp.encryption',
+                            'user' => 'plugins.email.mailer.smtp.user',
+                            'password' => 'plugins.email.mailer.smtp.password'
+                        ],
+                        'sendmail' => [
+                            'bin' => 'plugins.email.mailer.sendmail.bin'
+                        ]
+                    ],
+                    'content_type' => 'plugins.email.content_type',
+                    'from' => 'plugins.email.from',
+                    'from_name' => 'plugins.email.from_name',
+                    'to' => 'plugins.email.to',
+                    'to_name' => 'plugins.email.to_name',
+                    'debug' => 'plugins.email.debug'
                 ],
                 'error' => [
                     'enabled' => 'plugins.error.enabled',
@@ -1732,9 +2564,99 @@ return [
                         404 => 'plugins.error.routes.404'
                     ]
                 ],
-                'highlight' => [
-                    'enabled' => 'plugins.highlight.enabled',
-                    'theme' => 'plugins.highlight.theme'
+                'form' => [
+                    'enabled' => 'plugins.form.enabled',
+                    'files' => [
+                        'multiple' => 'plugins.form.files.multiple',
+                        'destination' => 'plugins.form.files.destination',
+                        'accept' => 'plugins.form.files.accept'
+                    ]
+                ],
+                'ganalytics' => [
+                    'enabled' => 'plugins.ganalytics.enabled',
+                    'trackingId' => 'plugins.ganalytics.trackingId'
+                ],
+                'langswitcher' => [
+                    'enabled' => 'plugins.langswitcher.enabled',
+                    'built_in_css' => 'plugins.langswitcher.built_in_css'
+                ],
+                'login' => [
+                    'enabled' => 'plugins.login.enabled',
+                    'built_in_css' => 'plugins.login.built_in_css',
+                    'route' => 'plugins.login.route',
+                    'redirect' => 'plugins.login.redirect',
+                    'parent_acl' => 'plugins.login.parent_acl',
+                    'rememberme' => [
+                        'enabled' => 'plugins.login.rememberme.enabled',
+                        'timeout' => 'plugins.login.rememberme.timeout',
+                        'name' => 'plugins.login.rememberme.name'
+                    ],
+                    'user_registration' => [
+                        'enabled' => 'plugins.login.user_registration.enabled',
+                        'redirect_after_registration' => 'plugins.login.user_registration.redirect_after_registration',
+                        'fields' => 'plugins.login.user_registration.fields',
+                        'default_values' => 'plugins.login.user_registration.default_values',
+                        'options' => [
+                            'validate_password1_and_password2' => 'plugins.login.user_registration.options.validate_password1_and_password2',
+                            'set_user_disabled' => 'plugins.login.user_registration.options.set_user_disabled',
+                            'login_after_registration' => 'plugins.login.user_registration.options.login_after_registration',
+                            'send_activation_email' => 'plugins.login.user_registration.options.send_activation_email',
+                            'send_notification_email' => 'plugins.login.user_registration.options.send_notification_email',
+                            'send_welcome_email' => 'plugins.login.user_registration.options.send_welcome_email'
+                        ]
+                    ],
+                    'route_register' => 'plugins.login.route_register',
+                    'oauth' => [
+                        'enabled' => 'plugins.login.oauth.enabled',
+                        'user' => [
+                            'autocreate' => 'plugins.login.oauth.user.autocreate',
+                            'access' => 'plugins.login.oauth.user.access'
+                        ],
+                        'providers' => [
+                            'Facebook' => [
+                                'enabled' => 'plugins.login.oauth.providers.Facebook.enabled',
+                                'credentials' => [
+                                    'key' => 'plugins.login.oauth.providers.Facebook.credentials.key',
+                                    'secret' => 'plugins.login.oauth.providers.Facebook.credentials.secret'
+                                ]
+                            ],
+                            'Google' => [
+                                'enabled' => 'plugins.login.oauth.providers.Google.enabled',
+                                'credentials' => [
+                                    'key' => 'plugins.login.oauth.providers.Google.credentials.key',
+                                    'secret' => 'plugins.login.oauth.providers.Google.credentials.secret'
+                                ]
+                            ],
+                            'GitHub' => [
+                                'enabled' => 'plugins.login.oauth.providers.GitHub.enabled',
+                                'credentials' => [
+                                    'key' => 'plugins.login.oauth.providers.GitHub.credentials.key',
+                                    'secret' => 'plugins.login.oauth.providers.GitHub.credentials.secret'
+                                ]
+                            ],
+                            'Twitter' => [
+                                'enabled' => 'plugins.login.oauth.providers.Twitter.enabled',
+                                'credentials' => [
+                                    'key' => 'plugins.login.oauth.providers.Twitter.credentials.key',
+                                    'secret' => 'plugins.login.oauth.providers.Twitter.credentials.secret'
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                'markdown-color' => [
+                    'enabled' => 'plugins.markdown-color.enabled'
+                ],
+                'mathjax' => [
+                    'enabled' => 'plugins.mathjax.enabled',
+                    'built_in_css' => 'plugins.mathjax.built_in_css',
+                    'built_in_js' => 'plugins.mathjax.built_in_js',
+                    'weight' => 'plugins.mathjax.weight',
+                    'CDN' => [
+                        'enabled' => 'plugins.mathjax.CDN.enabled',
+                        'url' => 'plugins.mathjax.CDN.url'
+                    ],
+                    'process' => 'plugins.mathjax.process'
                 ],
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',

@@ -1,0 +1,9 @@
+email: b@miracl.com
+access:
+  admin:
+    login: true
+    super: true
+fullname: 'Brian Spector'
+title: CEO
+state: enabled
+hashed_password: $2y$10$VyFvfHi2leFHyXcOwujt9e126NqZzWekpw4z.R9rgT/tW5UMkh9pS

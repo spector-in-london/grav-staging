@@ -1,0 +1,11 @@
+email: system@miracl.com
+fullname: 'MIRACL DevOps'
+title: DevOps
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$0ZydGeyLDf69zBW9xd5a6.2.CuS8GyYEichQv9NqmQa8bZXhwgot6

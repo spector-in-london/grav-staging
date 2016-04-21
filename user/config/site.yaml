@@ -1,8 +1,16 @@
-title: MILAGRO documentation
+title: 'Milagro Documentation'
+author:
+  name: 'Apache Community'
+  email: dev@milagro.incubator.apache.org
+taxonomies:
+  - category
+  - tag
 metadata:
-    description: 'MILAGRO'
-
-taxonomies: [category,tag]
+  description: 'Milagro Documentation Portal'
 summary:
+  enabled: true
+  format: short
   size: 300
-
+  delimiter: '==='
+blog:
+  route: /blog

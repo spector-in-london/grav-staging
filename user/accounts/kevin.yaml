@@ -1,0 +1,9 @@
+email: kevin.brannigan@miracl.com
+access:
+  admin:
+    login: true
+    super: true
+fullname: 'Kevin Brannigan'
+title: 'Head of DevOps'
+state: enabled
+hashed_password: $2y$10$IszIjDW4H66NL5yzwZf09eed3OKy8bJ2IrpO1TXyVI0u91jl7lPjK

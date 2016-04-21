@@ -1,105 +1,161 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1461072090,
-    'checksum' => '6881bab6f8c774234deb5856c3f23c36',
+    'timestamp' => 1461254444,
+    'checksum' => '00268ece7c1aa5d91210bad5e61f37e0',
     'files' => [
-        'user/localhost/config' => [
-            'security' => [
-                'file' => 'user/localhost/config/security.yaml',
-                'modified' => 1460542063
-            ],
-            'system' => [
-                'file' => 'user/localhost/config/system.yaml',
-                'modified' => 1456410000
-            ]
-        ],
         'user/config' => [
-            'plugins/anchors' => [
-                'file' => 'user/config/plugins/anchors.yaml',
-                'modified' => 1456410000
+            'media' => [
+                'file' => 'user/config/media.yaml',
+                'modified' => 1461251091
             ],
-            'plugins/highlight' => [
-                'file' => 'user/config/plugins/highlight.yaml',
-                'modified' => 1456410000
+            'plugins/ganalytics' => [
+                'file' => 'user/config/plugins/ganalytics.yaml',
+                'modified' => 1461252292
             ],
-            'plugins/simplesearch' => [
-                'file' => 'user/config/plugins/simplesearch.yaml',
-                'modified' => 1456410000
+            'plugins/mathjax' => [
+                'file' => 'user/config/plugins/mathjax.yaml',
+                'modified' => 1461252322
+            ],
+            'security' => [
+                'file' => 'user/config/security.yaml',
+                'modified' => 1461251090
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1461071829
+                'modified' => 1461251739
+            ],
+            'streams' => [
+                'file' => 'user/config/streams.yaml',
+                'modified' => 1461251091
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1456410000
+                'modified' => 1461253321
+            ],
+            'themes/learn2' => [
+                'file' => 'user/config/themes/learn2.yaml',
+                'modified' => 1461251302
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1456410000
+                'modified' => 1456409950
             ]
         ],
         'user/plugins' => [
-            'plugins/anchors' => [
-                'file' => 'user/plugins/anchors/anchors.yaml',
-                'modified' => 1456410000
+            'plugins/admin' => [
+                'file' => 'user/plugins/admin/admin.yaml',
+                'modified' => 1461254427
             ],
-            'plugins/breadcrumbs' => [
-                'file' => 'user/plugins/breadcrumbs/breadcrumbs.yaml',
-                'modified' => 1456410002
+            'plugins/email' => [
+                'file' => 'user/plugins/email/email.yaml',
+                'modified' => 1461251188
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1456410002
+                'modified' => 1456409950
             ],
-            'plugins/highlight' => [
-                'file' => 'user/plugins/highlight/highlight.yaml',
-                'modified' => 1456410004
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1456409950
+            ],
+            'plugins/ganalytics' => [
+                'file' => 'user/plugins/ganalytics/ganalytics.yaml',
+                'modified' => 1461252285
+            ],
+            'plugins/langswitcher' => [
+                'file' => 'user/plugins/langswitcher/langswitcher.yaml',
+                'modified' => 1461252353
+            ],
+            'plugins/login' => [
+                'file' => 'user/plugins/login/login.yaml',
+                'modified' => 1456409950
+            ],
+            'plugins/markdown-color' => [
+                'file' => 'user/plugins/markdown-color/markdown-color.yaml',
+                'modified' => 1461252433
+            ],
+            'plugins/mathjax' => [
+                'file' => 'user/plugins/mathjax/mathjax.yaml',
+                'modified' => 1461252309
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1456410006
+                'modified' => 1456409950
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/simplesearch.yaml',
-                'modified' => 1456410006
+                'modified' => 1461252387
             ]
         ]
     ],
     'data' => [
         'plugins' => [
-            'anchors' => [
+            'admin' => [
                 'enabled' => true,
-                'active' => true,
-                'selectors' => '#body h2, #body h3, #body h4, #body h5',
-                'placement' => 'right',
-                'visible' => 'hover',
-                'icon' => NULL,
-                'class' => NULL
+                'route' => '/your-mama',
+                'theme' => 'grav',
+                'dashboard' => [
+                    'days_of_stats' => 7
+                ],
+                'session' => [
+                    'timeout' => 1800
+                ],
+                'warnings' => [
+                    'delete_page' => true
+                ],
+                'edit_mode' => 'normal',
+                'show_github_msg' => true,
+                'google_fonts' => true,
+                'enable_auto_updates_check' => true,
+                'popularity' => [
+                    'enabled' => true,
+                    'ignore' => [
+                        0 => '/test*',
+                        1 => '/modular'
+                    ],
+                    'history' => [
+                        'daily' => 30,
+                        'monthly' => 12,
+                        'visitors' => 20
+                    ]
+                ]
             ],
-            'breadcrumbs' => [
+            'email' => [
                 'enabled' => true,
-                'show_all' => true,
-                'built_in_css' => true,
-                'include_home' => true,
-                'icon_home' => '',
-                'icon_divider_classes' => 'fa fa-angle-right',
-                'link_trailing' => false
+                'from' => NULL,
+                'from_name' => NULL,
+                'to' => NULL,
+                'to_name' => NULL,
+                'mailer' => [
+                    'engine' => 'mail',
+                    'smtp' => [
+                        'server' => 'localhost',
+                        'port' => 25,
+                        'encryption' => 'none',
+                        'user' => '',
+                        'password' => ''
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => false
             ],
             'error' => [
                 'enabled' => true,
@@ -107,21 +163,129 @@ return [
                     404 => '/error'
                 ]
             ],
-            'highlight' => [
+            'form' => [
                 'enabled' => true,
-                'theme' => 'learn'
+                'files' => [
+                    'multiple' => false,
+                    'destination' => '@self',
+                    'accept' => [
+                        0 => 'image/*'
+                    ]
+                ]
+            ],
+            'ganalytics' => [
+                'enabled' => true,
+                'trackingId' => ''
+            ],
+            'langswitcher' => [
+                'enabled' => true,
+                'built_in_css' => true
+            ],
+            'login' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'route' => false,
+                'route_register' => false,
+                'route_activate' => '/activate_user',
+                'route_forgot' => '/forgot_password',
+                'route_reset' => '/reset_password',
+                'redirect' => NULL,
+                'parent_acl' => false,
+                'user_registration' => [
+                    'enabled' => true,
+                    'fields' => [
+                        0 => 'username',
+                        1 => 'password',
+                        2 => 'email',
+                        3 => 'fullname',
+                        4 => 'title',
+                        5 => 'access',
+                        6 => 'state'
+                    ],
+                    'additional_params' => [
+                        'access' => 'site.login'
+                    ],
+                    'options' => [
+                        'validate_password1_and_password2' => true,
+                        'set_user_disabled' => false,
+                        'login_after_registration' => true,
+                        'send_activation_email' => false,
+                        'send_notification_email' => false,
+                        'send_welcome_email' => false
+                    ]
+                ],
+                'rememberme' => [
+                    'enabled' => true,
+                    'timeout' => 1800,
+                    'name' => 'grav-rememberme'
+                ],
+                'oauth' => [
+                    'enabled' => false,
+                    'user' => [
+                        'autocreate' => false,
+                        'access' => [
+                            'site' => [
+                                'login' => true
+                            ]
+                        ]
+                    ],
+                    'providers' => [
+                        'Facebook' => [
+                            'enabled' => false,
+                            'credentials' => [
+                                'key' => NULL,
+                                'secret' => NULL
+                            ]
+                        ],
+                        'Google' => [
+                            'enabled' => false,
+                            'credentials' => [
+                                'key' => NULL,
+                                'secret' => NULL
+                            ]
+                        ],
+                        'GitHub' => [
+                            'enabled' => false,
+                            'credentials' => [
+                                'key' => NULL,
+                                'secret' => NULL
+                            ]
+                        ],
+                        'Twitter' => [
+                            'enabled' => false,
+                            'credentials' => [
+                                'key' => NULL,
+                                'secret' => NULL
+                            ]
+                        ]
+                    ]
+                ]
+            ],
+            'markdown-color' => [
+                'enabled' => true
+            ],
+            'mathjax' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'built_in_js' => true,
+                'weight' => -5,
+                'CDN' => [
+                    'enabled' => true,
+                    'url' => 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+                ],
+                'process' => true
             ],
             'problems' => [
-                'enabled' => false,
+                'enabled' => true,
                 'built_in_css' => true
             ],
             'simplesearch' => [
                 'enabled' => true,
-                'built_in_css' => false,
+                'built_in_css' => true,
                 'route' => '/search',
                 'template' => 'simplesearch_results',
                 'filters' => [
-                    'category' => 'docs'
+                    'category' => 'blog'
                 ],
                 'filter_combinator' => 'and',
                 'order' => [
@@ -373,17 +537,17 @@ return [
             ]
         ],
         'site' => [
-            'title' => 'MILAGRO documentation',
+            'title' => 'Milagro Documentation',
             'author' => [
-                'name' => 'John Appleseed',
-                'email' => 'john@email.com'
+                'name' => 'Apache Community',
+                'email' => 'dev@milagro.incubator.apache.org'
             ],
             'taxonomies' => [
                 0 => 'category',
                 1 => 'tag'
             ],
             'metadata' => [
-                'description' => 'MILAGRO'
+                'description' => 'Milagro Documentation Portal'
             ],
             'summary' => [
                 'enabled' => true,
@@ -422,7 +586,7 @@ return [
         ],
         'system' => [
             'absolute_urls' => false,
-            'timezone' => '',
+            'timezone' => 'Europe/London',
             'default_locale' => NULL,
             'param_sep' => ':',
             'wrapped_site' => false,
@@ -430,7 +594,8 @@ return [
             'proxy_url' => NULL,
             'languages' => [
                 'supported' => [
-                    
+                    0 => 'en',
+                    1 => 'jp'
                 ],
                 'include_default_lang' => true,
                 'translations' => true,
@@ -440,13 +605,13 @@ return [
                 'override_locale' => false
             ],
             'home' => [
-                'alias' => '/basics',
+                'alias' => '/home',
                 'hide_in_urls' => false
             ],
             'pages' => [
                 'theme' => 'learn2',
                 'order' => [
-                    'by' => 'default',
+                    'by' => 'folder',
                     'dir' => 'asc'
                 ],
                 'list' => [
@@ -468,10 +633,10 @@ return [
                     'twig' => true
                 ],
                 'markdown' => [
-                    'extra' => false,
-                    'auto_line_breaks' => false,
-                    'auto_url_links' => false,
-                    'escape_markup' => false,
+                    'extra' => true,
+                    'auto_line_breaks' => true,
+                    'auto_url_links' => true,
+                    'escape_markup' => true,
                     'special_chars' => [
                         '>' => 'gt',
                         '<' => 'lt'
@@ -492,7 +657,7 @@ return [
                 'etag' => false,
                 'vary_accept_encoding' => false,
                 'redirect_default_route' => false,
-                'redirect_default_code' => 301,
+                'redirect_default_code' => '301',
                 'redirect_trailing_slash' => true,
                 'ignore_files' => [
                     0 => '.DS_Store'
@@ -503,7 +668,7 @@ return [
                 ],
                 'ignore_hidden' => true,
                 'url_taxonomy_filters' => true,
-                'markdown_extra' => true
+                'markdown_extra' => false
             ],
             'cache' => [
                 'enabled' => true,
@@ -537,7 +702,7 @@ return [
                 ]
             ],
             'errors' => [
-                'display' => false,
+                'display' => true,
                 'log' => true
             ],
             'debugger' => [
@@ -572,7 +737,28 @@ return [
             ]
         ],
         'security' => [
-            'salt' => 'yA5ojDHZW8Cafx'
+            'salt' => 'rhtZMbnCSamJ2s'
+        ],
+        'themes' => [
+            'learn2' => [
+                'enabled' => true,
+                'top_level_version' => false,
+                'github' => [
+                    'position' => 'top',
+                    'tree' => 'https://github.com/getgrav/grav-skeleton-rtfm-site/blob/develop/',
+                    'commits' => 'https://github.com/getgrav/grav-skeleton-rtfm-site/commits/develop/'
+                ],
+                'streams' => [
+                    'schemes' => [
+                        'theme' => [
+                            'type' => 'ReadOnlyStream',
+                            'paths' => [
+                                0 => 'user/themes/learn2'
+                            ]
+                        ]
+                    ]
+                ]
+            ]
         ]
     ]
 ];
