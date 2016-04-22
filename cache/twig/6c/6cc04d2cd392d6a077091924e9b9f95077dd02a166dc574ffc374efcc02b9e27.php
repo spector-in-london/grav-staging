@@ -27,7 +27,7 @@ class __TwigTemplate_5110026346f4222eae7e97f1666c0fa36146b9a2e178e42a42fff1d13b8
         // line 3
         if ($this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "route", array())) {
             // line 4
-            $context["installing"] = (is_string($__internal_34a5f9dac654fefa243f63069f3b14552ee5c40d65038042d644469fe670e013 = $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "route", array())) && is_string($__internal_b3e804d8115210b8a0305d5bf14b4e8941db2c2d7d09cdee9561cd404a0e9a78 = "install") && ('' === $__internal_b3e804d8115210b8a0305d5bf14b4e8941db2c2d7d09cdee9561cd404a0e9a78 || 0 === strpos($__internal_34a5f9dac654fefa243f63069f3b14552ee5c40d65038042d644469fe670e013, $__internal_b3e804d8115210b8a0305d5bf14b4e8941db2c2d7d09cdee9561cd404a0e9a78)));
+            $context["installing"] = (is_string($__internal_0fecf646e0cb02d27ae2de2d236d67fd1ed6ea10b483e93bfd6d274a71ad086f = $this->getAttribute((isset($context["admin"]) ? $context["admin"] : null), "route", array())) && is_string($__internal_e6e96300d668378a54ab29813a34755790ff795e24d9c19e568124d029ea294c = "install") && ('' === $__internal_e6e96300d668378a54ab29813a34755790ff795e24d9c19e568124d029ea294c || 0 === strpos($__internal_0fecf646e0cb02d27ae2de2d236d67fd1ed6ea10b483e93bfd6d274a71ad086f, $__internal_e6e96300d668378a54ab29813a34755790ff795e24d9c19e568124d029ea294c)));
             // line 5
             $context["installed"] = true;
             // line 8

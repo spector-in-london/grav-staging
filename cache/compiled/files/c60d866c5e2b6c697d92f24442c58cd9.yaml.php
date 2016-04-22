@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/error/blueprints.yaml',
-    'modified' => 1456409950,
+    'modified' => 1461330889,
     'data' => [
         'name' => 'Error',
         'version' => '1.4.1',

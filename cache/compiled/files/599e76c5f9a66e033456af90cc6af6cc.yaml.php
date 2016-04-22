@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/config/system.yaml',
-    'modified' => 1461253321,
+    'modified' => 1461341623,
     'data' => [
         'absolute_urls' => false,
         'timezone' => 'Europe/London',
@@ -41,7 +41,7 @@ return [
             'publish_dates' => true,
             'process' => [
                 'markdown' => true,
-                'twig' => false
+                'twig' => true
             ],
             'twig_first' => false,
             'events' => [

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://mathjax/mathjax.yaml',
-    'modified' => 1461252309,
+    'modified' => 1461330890,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,

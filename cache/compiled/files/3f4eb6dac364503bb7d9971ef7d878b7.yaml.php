@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/system/blueprints/pages/new_folder.yaml',
-    'modified' => 1456409950,
+    'modified' => 1461330887,
     'data' => [
         'rules' => [
             'slug' => [

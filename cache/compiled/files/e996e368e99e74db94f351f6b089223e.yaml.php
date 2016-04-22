@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/email/languages.yaml',
-    'modified' => 1461251188,
+    'modified' => 1461330889,
     'data' => [
         'en' => [
             'PLUGIN_EMAIL' => [

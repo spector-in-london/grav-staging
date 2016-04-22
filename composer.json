@@ -26,7 +26,9 @@
         "maximebf/debugbar": "~1.10",
         "ext-mbstring": "*",
         "ext-openssl": "*",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "knplabs/knp-snappy": "^0.4.3",
+        "h4cc/wkhtmltopdf-i386": "^0.12.3"
     },
     "require-dev": {
         "codeception/codeception": "^2.1",

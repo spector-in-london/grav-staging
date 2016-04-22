@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/langswitcher/blueprints.yaml',
-    'modified' => 1461252353,
+    'modified' => 1461330890,
     'data' => [
         'name' => 'LangSwitcher',
         'version' => '1.1.0',

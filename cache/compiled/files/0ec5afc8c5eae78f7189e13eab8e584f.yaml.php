@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/mathjax/blueprints.yaml',
-    'modified' => 1461252309,
+    'modified' => 1461330890,
     'data' => [
         'name' => 'MathJax',
         'version' => '1.4.0',

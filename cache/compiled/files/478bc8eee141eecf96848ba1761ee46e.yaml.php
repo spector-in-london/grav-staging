@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/themes/learn2/languages.yaml',
-    'modified' => 1461251244,
+    'modified' => 1461330891,
     'data' => [
         'en' => [
             'THEME_LEARN2_GITHUB_EDIT_THIS_PAGE' => 'edit this page',

@@ -1,197 +1,209 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1461321896,
-    'checksum' => 'c78ee7f3507284e52208b8b9b6888b3f',
+    'timestamp' => 1461341325,
+    'checksum' => '98c4c92d94e5fd6683bdf51e50a6348a',
     'files' => [
         'system/languages' => [
             'cs' => [
                 'file' => 'system/languages/cs.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'de' => [
                 'file' => 'system/languages/de.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'el' => [
                 'file' => 'system/languages/el.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'en' => [
                 'file' => 'system/languages/en.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'es' => [
                 'file' => 'system/languages/es.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'fr' => [
                 'file' => 'system/languages/fr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'hr' => [
                 'file' => 'system/languages/hr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'hu' => [
                 'file' => 'system/languages/hu.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'it' => [
                 'file' => 'system/languages/it.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'ja' => [
                 'file' => 'system/languages/ja.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'lt' => [
                 'file' => 'system/languages/lt.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'nb' => [
                 'file' => 'system/languages/nb.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'nl' => [
                 'file' => 'system/languages/nl.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'no' => [
                 'file' => 'system/languages/no.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'pl' => [
                 'file' => 'system/languages/pl.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'pt' => [
                 'file' => 'system/languages/pt.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'ro' => [
                 'file' => 'system/languages/ro.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330887
             ],
             'ru' => [
                 'file' => 'system/languages/ru.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'sv' => [
                 'file' => 'system/languages/sv.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'tr' => [
                 'file' => 'system/languages/tr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ]
         ],
         'user/plugins' => [
             'plugins/email' => [
                 'file' => 'user/plugins/email/languages.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330889
+            ],
+            'plugins/external_links' => [
+                'file' => 'user/plugins/external_links/languages.yaml',
+                'modified' => 1461338601
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/languages.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330890
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/languages.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330890
             ],
             'plugins/mathjax' => [
                 'file' => 'user/plugins/mathjax/languages.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330890
+            ],
+            'plugins/shortcodes' => [
+                'file' => 'user/plugins/shortcodes/languages.yaml',
+                'modified' => 1461340916
+            ],
+            'plugins/toc' => [
+                'file' => 'user/plugins/toc/languages.yaml',
+                'modified' => 1461340022
             ]
         ],
         'user/plugins/admin/languages' => [
             'cs' => [
                 'file' => 'user/plugins/admin/languages/cs.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'cy' => [
                 'file' => 'user/plugins/admin/languages/cy.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'de' => [
                 'file' => 'user/plugins/admin/languages/de.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'en' => [
                 'file' => 'user/plugins/admin/languages/en.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'es' => [
                 'file' => 'user/plugins/admin/languages/es.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'fi' => [
                 'file' => 'user/plugins/admin/languages/fi.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'fr' => [
                 'file' => 'user/plugins/admin/languages/fr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'hr' => [
                 'file' => 'user/plugins/admin/languages/hr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'hu' => [
                 'file' => 'user/plugins/admin/languages/hu.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'it' => [
                 'file' => 'user/plugins/admin/languages/it.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'ja' => [
                 'file' => 'user/plugins/admin/languages/ja.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'lt' => [
                 'file' => 'user/plugins/admin/languages/lt.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'nl' => [
                 'file' => 'user/plugins/admin/languages/nl.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'no' => [
                 'file' => 'user/plugins/admin/languages/no.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'pl' => [
                 'file' => 'user/plugins/admin/languages/pl.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'pt' => [
                 'file' => 'user/plugins/admin/languages/pt.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'ru' => [
                 'file' => 'user/plugins/admin/languages/ru.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'sv' => [
                 'file' => 'user/plugins/admin/languages/sv.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'tlh' => [
                 'file' => 'user/plugins/admin/languages/tlh.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'tr' => [
                 'file' => 'user/plugins/admin/languages/tr.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'uk' => [
                 'file' => 'user/plugins/admin/languages/uk.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ],
             'zh' => [
                 'file' => 'user/plugins/admin/languages/zh.yaml',
-                'modified' => 1461318238
+                'modified' => 1461330888
             ]
         ]
     ],
@@ -1338,6 +1350,44 @@ return [
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Bitte konfigurieren sie eine \'Von\' (\'from\') Adresse in den Email-Plugin-Einstellungen oder im Formular.'
             ],
             'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'GLOBAL_CONFIG' => 'Globale Einstellungen',
+                    'DEFAULT_CONFIG' => 'Standardeinstellungen für External Links',
+                    'SPECIFIC_CONFIG' => 'Globale und seitenspezifische Einstellungen',
+                    'PLUGIN_STATUS' => 'Plugin Status',
+                    'BUILTIN_CSS' => 'Verwende mitgeliefertes CSS',
+                    'WEIGHT' => 'Ausführungsreihenfolge',
+                    'EXTERNAL_LINKS' => 'External Links',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Ausnahmen',
+                        'SECTION_HELP' => 'Setzt Links mit bestimmten Klassen oder Links von bestimmten Domains immer als intern.',
+                        'CLASSES' => 'Ignoriere Links mit diesen Klassen',
+                        'CLASSES_HELP' => 'Komma getrennte Liste',
+                        'DOMAINS' => 'Eine Liste von auszuschließenden Domains',
+                        'DOMAINS_HELP' => 'Komma getrennte Liste von Domains z.B. _localhost/*_ (jeder regulärer Ausdruck kann verwendet werden)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Links',
+                        'SECTION_HELP' => 'Sieht Links beginnend mit <code>www.</code> oder mit als extern markierten Protokollen als extern an.',
+                        'WWW' => 'Verlinkung (WWW)',
+                        'WWW_HELP' => 'Verlinke auch Links, die mit \'www.\' beginnen als extern',
+                        'SCHEMES' => 'Erlaubte Protokolle',
+                        'SCHEMES_HELP' => 'Liste von erlaubten Protokollen'
+                    ],
+                    'PROCESS' => 'Aktiviere <code>External Links</code> auf Seite',
+                    'TITLE' => 'Zeige Standardtexttitel für externe Links',
+                    'TITLE_MESSAGE' => 'Dieser Link führt auf eine externe Webseite für deren Inhalt wir nicht verantwortlich sind.',
+                    'NO_FOLLOW' => 'Fügt <code>rel="nofollow"</code> zu allen externen Links',
+                    'TARGET' => 'Setze "target" Attribut des Links.',
+                    'TARGET_BLANK' => '_blank - Öffne Link im neuen Fenster',
+                    'TARGET_SELF' => '_self - Öffne Link im gleichen Tab oder Seite',
+                    'TARGET_PARENT' => '_parent - Öffne Link im Elternfenster',
+                    'TARGET_TOP' => '_top - Öffne Link im ganzen Fenster',
+                    'MODE' => 'Modus',
+                    'MODE_HELP' => 'active = Zeichne externe Links aus; passive = Zeichne externe Links aus ohne entsprechende CSS-Klassen zu setzen',
+                    'MODE_ACTIVE' => 'Aktiv - Zeichne externe Links aus',
+                    'MODE_PASSIVE' => 'Passiv - Zeichne externe Links aus ohne entsprechende CSS-Klassen zu setzen'
+                ],
                 'MATHJAX' => [
                     'GLOBAL_CONFIG' => 'Globale Einstellungen',
                     'DEFAULT_CONFIG' => 'Standardeinstellungen für External Links',
@@ -1355,6 +1405,79 @@ return [
                         'URL_HELP' => 'Gebe hier die MathJax CDN URL ein oder lasse es frei um MathJax direkt von wwww.mathjax.org zu laden.'
                     ],
                     'PROCESS' => 'Aktiviere <code>MathJax</code> auf Seite'
+                ],
+                'SHORTCODES' => [
+                    'GLOBAL_CONFIG' => 'Globale Einstellungen',
+                    'DEFAULT_CONFIG' => 'Standardeinstellungen für Shortcodes',
+                    'PLUGIN_STATUS' => 'Plugin Status',
+                    'OPTIONS' => 'Optionen',
+                    'ASSETS' => 'Assets',
+                    'ASSETS_ENABLED' => '<code>{{% assets %}}</code> Shortcode aktivieren',
+                    'ASSETS_OPTIONS' => [
+                        'TYPE' => 'Assets-Typ',
+                        'CSS' => 'CSS',
+                        'JS' => 'JavaScript',
+                        'INLINE' => 'Assets als Inline-Element',
+                        'PRIORITY' => 'Assets Priorität',
+                        'PRIORITY_HELP' => 'Priorität des Assets, wenn sie zur Grav Pipeline hinzugefügt werden; größere Werte werden zuerst geladen',
+                        'PIPELINE' => 'Kombiniere Assets',
+                        'LOAD' => 'Ladeverhalten',
+                        'LOAD_HELP' => 'Lade Assets asynchron "async" oder verzögert "defer"',
+                        'DEFAULT' => '- Standard -',
+                        'ASYNC' => 'Async - asynchrones Laden von JavaScript',
+                        'DEFER' => 'Defer - verzögertes Laden von JavaScript'
+                    ],
+                    'COMMENT' => 'Comment',
+                    'COMMENT_ENABLED' => '<code>{{% comment %}}</code> Shortcode aktivieren',
+                    'EMBED' => 'Embed',
+                    'EMBED_ENABLED' => '<code>{{% embed %}}</code> Shortcode aktivieren',
+                    'EMBED_TEMPLATE' => 'Standard Seiten-Template',
+                    'MARKDOWN' => 'Markdown',
+                    'MARKDOWN_ENABLED' => '<code>{{% markdown %}}</code> Shortcode aktivieren',
+                    'SUMMARY' => 'Summary',
+                    'SUMMARY_ENABLED' => '<code>{{% summary %}}</code> Shortcode aktivieren',
+                    'TWIG' => 'Twig',
+                    'TWIG_ENABLED' => '<code>{{% twig %}}</code> Shortcode aktivieren'
+                ],
+                'TOC' => [
+                    'GLOBAL_CONFIG' => 'Globale Einstellungen',
+                    'DEFAULT_CONFIG' => 'Standardeinstellungen für External Links',
+                    'SPECIFIC_CONFIG' => 'Globale und seitenspezifische Einstellungen',
+                    'PLUGIN_STATUS' => 'Plugin Status',
+                    'BUILTIN_CSS' => 'Verwende mitgeliefertes CSS',
+                    'TITLE' => 'Zeige Titel des Inhaltsverzeichnisses',
+                    'ANCHORLINK' => 'Zeige Anker-Links',
+                    'ANCHORLINK_HELP' => 'Aktivieren falls alle Überschriften mit Anker-Links versehen werden sollen.',
+                    'PERMALINK' => 'Zeige Permalinks für Überschriften',
+                    'PERMALINK_HELP' => 'Aktivieren um Permalinks für Überschriften hinzuzufügen.',
+                    'PLACEMENT' => 'Platzierung der Anker-Links',
+                    'PLACEMENT_LEFT' => 'Links',
+                    'PLACEMENT_RIGHT' => 'Rechts',
+                    'VISIBLILITY' => 'Sichtbarkeit der Anker-Links',
+                    'VISIBLILITY_HOVER' => 'hover - Sichtbar beim Drüberfahren mit der Maus',
+                    'VISIBLILITY_ALWAYS' => 'always - Immer sichtbar',
+                    'ICON' => 'Text/Bild bevor Anker-Link',
+                    'ICON_HELP' => 'Standard oder ein spezifisches Zeichen wie #, ¶, ❡, oder §.',
+                    'CLASS' => 'Zusätzliche Klassen',
+                    'CLASS_HELP' => 'Hinzufügen von zusätzlichen Klassen zum Anker-Link',
+                    'BASELEVEL' => 'Beginne bei Überschrift x. Ordnung',
+                    'HEADINGLEVEL' => 'Maximal angezeigte Ordnung von Überschriften in TOC/MINITOC',
+                    'PROCESS' => 'Aktiviere <code>Toc</code>-Filter auf Seite',
+                    'SLUG' => [
+                        'SECTION' => 'Clean URL Erzeugung',
+                        'TRUNCATE' => 'Überschriften kürzen',
+                        'LENGTH' => 'Clean URL Länge',
+                        'BREAK' => 'Trennzeichen',
+                        'BREAK_HELP' => 'Trennzeichen welches zwischen Wörtern in der Clean URL eingesetzt wird',
+                        'PAD' => 'Addendum',
+                        'PAD_HELP' => 'Zusatz, der am Ende der verkürzte Clean URL kennzeichnet'
+                    ],
+                    'PATTERNS' => [
+                        '~\\&~' => 'und',
+                        '~[^\\p{L}\\d]+~u' => '-',
+                        '~([A-Z]+)([A-Z][a-z])~' => '\\1-\\2',
+                        '~([a-z]{2,})([A-Z])~' => '\\1-\\2'
+                    ]
                 ]
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
@@ -1932,6 +2055,139 @@ Pfad: `%2$s`
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Please configure a \'to\' address in the Email Plugin settings, or in the form',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Please configure a \'from\' address in the Email Plugin settings, or in the form'
             ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'GLOBAL_CONFIG' => 'Global plugin configurations',
+                    'DEFAULT_CONFIG' => 'Default values for External Links configuration',
+                    'SPECIFIC_CONFIG' => 'Global and page specific configurations',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'BUILTIN_CSS' => 'Use built in CSS',
+                    'WEIGHT' => 'Order of execution',
+                    'EXTERNAL_LINKS' => 'External Links',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Exclusion',
+                        'SECTION_HELP' => 'Exclude links with a specific class or domains from being recognized as external links.',
+                        'CLASSES' => 'Exclude all links with this class',
+                        'CLASSES_HELP' => 'Comma separated list.',
+                        'DOMAINS' => 'A list of domains to be excluded',
+                        'DOMAINS_HELP' => 'Comma separated list of domains e.g. _localhost/*_  (any regular expression can be used)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Links',
+                        'SECTION_HELP' => 'Set links starting with <code>www.</code> and within the list of allowed schemes as external.',
+                        'WWW' => 'Link WWW',
+                        'WWW_HELP' => 'Automatically link any hostname that starts with \'www.\' as external',
+                        'SCHEMES' => 'Allowed schemes',
+                        'SCHEMES_HELP' => 'List of allowed schemes'
+                    ],
+                    'PROCESS' => 'Filter external links on the page',
+                    'TITLE' => 'Show default title for external links',
+                    'TITLE_MESSAGE' => 'This link will take you to an external web site. We are not responsible for their content.',
+                    'NO_FOLLOW' => 'Add <code>rel="nofollow"</code> to all external links',
+                    'TARGET' => 'Set target attribute of the link.',
+                    'TARGET_BLANK' => '_blank | Load in a new window',
+                    'TARGET_SELF' => '_self | Load in the same frame as it was clicked',
+                    'TARGET_PARENT' => '_parent | Load in the parent frameset',
+                    'TARGET_TOP' => '_top | Load in the full body of the window',
+                    'MODE' => 'Mode',
+                    'MODE_HELP' => 'active = process and parse all links; passive = parse links, but don\'t set CSS classes',
+                    'MODE_ACTIVE' => 'Active - Process and parse all links',
+                    'MODE_PASSIVE' => 'Passive - Parse links, but don\'t set CSS classes'
+                ],
+                'MATHJAX' => [
+                    'GLOBAL_CONFIG' => 'Global plugin configurations',
+                    'DEFAULT_CONFIG' => 'Default values for External Links configuration',
+                    'SPECIFIC_CONFIG' => 'Global and page specific configurations',
+                    'MATHJAX' => 'MathJax',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'BUILTIN_CSS' => 'Use built in CSS',
+                    'BUILTIN_JS' => 'Use built in JS',
+                    'WEIGHT' => 'Order of execution',
+                    'WEIGHT_HELP' => 'To process the page contents right after *SmartyPants* use negative values.',
+                    'CDN' => [
+                        'ENABLED' => 'Use MathJax Content Delivery Network (CDN)',
+                        'ENABLED_HELP' => 'Check this box to load MathJax source from MathJax servers (recommended) or from the link you can provide below.',
+                        'URL' => 'MathJax CDN URL',
+                        'URL_HELP' => 'Enter the Mathjax CDN URL here or leave it unchanged to use the one provided by wwww.mathjax.org'
+                    ],
+                    'PROCESS' => 'Activate <code>MathJax</code> filter on the page'
+                ],
+                'SHORTCODES' => [
+                    'GLOBAL_CONFIG' => 'Global plugin configurations',
+                    'DEFAULT_CONFIG' => 'Default values for Shortcodes configuration',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'OPTIONS' => 'Options',
+                    'ASSETS' => 'Assets',
+                    'ASSETS_ENABLED' => 'Activate <code>{{% assets %}}</code> shortcode',
+                    'ASSETS_OPTIONS' => [
+                        'TYPE' => 'Default assets type',
+                        'CSS' => 'CSS',
+                        'JS' => 'JavaScript',
+                        'INLINE' => 'Inline assets by default',
+                        'PRIORITY' => 'Default assets priority',
+                        'PRIORITY_HELP' => 'Priority to add CSS or JS to Grav pipeline; bigger comes first',
+                        'PIPELINE' => 'Pipeline assets',
+                        'LOAD' => 'Load behavior',
+                        'LOAD_HELP' => 'Load asset either asynchronously "async" or deferred "defer"',
+                        'DEFAULT' => '- default -',
+                        'ASYNC' => 'Async - asynchronously load JavaScript',
+                        'DEFER' => 'Defer - deferred loading of JavaScript'
+                    ],
+                    'COMMENT' => 'Comment',
+                    'COMMENT_ENABLED' => 'Activate <code>{{% comment %}}</code> shortcode',
+                    'EMBED' => 'Embed',
+                    'EMBED_ENABLED' => 'Activate <code>{{% embed %}}</code> shortcode',
+                    'EMBED_TEMPLATE' => 'Default page template',
+                    'MARKDOWN' => 'Markdown',
+                    'MARKDOWN_ENABLED' => 'Activate <code>{{% markdown %}}</code> shortcode',
+                    'SUMMARY' => 'Summary',
+                    'SUMMARY_ENABLED' => 'Activate <code>{{% summary %}}</code> shortcode',
+                    'TWIG' => 'Twig',
+                    'TWIG_ENABLED' => 'Activate <code>{{% twig %}}</code> shortcode'
+                ],
+                'TOC' => [
+                    'GLOBAL_CONFIG' => 'Global plugin configurations',
+                    'DEFAULT_CONFIG' => 'Default values for External Links configuration',
+                    'SPECIFIC_CONFIG' => 'Global and page specific configurations',
+                    'PLUGIN_STATUS' => 'Plugin status',
+                    'BUILTIN_CSS' => 'Use built in CSS',
+                    'TITLE' => 'Show title in the Table of Contents',
+                    'ANCHORLINK' => 'Show anchor links',
+                    'ANCHORLINK_HELP' => 'Set to true to cause all headers to link to themselves.',
+                    'PERMALINK' => 'Add permalinks for headings',
+                    'PERMALINK_HELP' => 'Set to true to generate permanent links at the beginning of each header',
+                    'PLACEMENT' => 'Placement of anchor link',
+                    'PLACEMENT_LEFT' => 'Left',
+                    'PLACEMENT_RIGHT' => 'Right',
+                    'VISIBLILITY' => 'Visibility of anchor link',
+                    'VISIBLILITY_HOVER' => 'hover - Visible on hover',
+                    'VISIBLILITY_ALWAYS' => 'always - Always visible',
+                    'ICON' => 'Icon of the anchor link',
+                    'ICON_HELP' => 'Default link or a specific character like: #, ¶, ❡, and §.',
+                    'CLASS' => 'Additional classes',
+                    'CLASS_HELP' => 'Adds the provided class to the anchor link',
+                    'BASELEVEL' => 'Base level for headings',
+                    'HEADINGLEVEL' => 'Maximum heading level to show in TOC/MINITOC',
+                    'PROCESS' => 'Activate <code>Toc</code> filter on the page',
+                    'SLUG' => [
+                        'SECTION' => 'Slug generation',
+                        'TRUNCATE' => 'Truncate headings for slug generation',
+                        'LENGTH' => 'Slug string length',
+                        'BREAK' => 'Break delimiter',
+                        'BREAK_HELP' => 'The break delimiter to divide the slug into pieces of words',
+                        'PAD' => 'Addendum',
+                        'PAD_HELP' => 'Added to the end of the truncated slug'
+                    ],
+                    'PATTERNS' => [
+                        '~\\&~' => 'and',
+                        '~[^\\p{L}\\d]+~u' => '-',
+                        '~(\\w{4,})y\\-s\\-~i' => '$1ies-',
+                        '~(\\w{4,})\\-s\\-~i' => '$1s-',
+                        '~([A-Z]+)([A-Z][a-z])~' => '\\1-\\2',
+                        '~([a-z]{2,})([A-Z])~' => '\\1-\\2'
+                    ]
+                ]
+            ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Form not validated. One or more required fields are missing.',
                 'NONCE_NOT_VALIDATED' => 'Oops there was a problem, please check your input and submit the form again.',
@@ -2030,26 +2286,6 @@ Pfad: `%2$s`
                 'OPTIONS' => 'Options',
                 'EMAIL_VALIDATION_MESSAGE' => 'Must be a valid email address',
                 'PASSWORD_VALIDATION_MESSAGE' => 'Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters'
-            ],
-            'PLUGINS' => [
-                'MATHJAX' => [
-                    'GLOBAL_CONFIG' => 'Global plugin configurations',
-                    'DEFAULT_CONFIG' => 'Default values for External Links configuration',
-                    'SPECIFIC_CONFIG' => 'Global and page specific configurations',
-                    'MATHJAX' => 'MathJax',
-                    'PLUGIN_STATUS' => 'Plugin status',
-                    'BUILTIN_CSS' => 'Use built in CSS',
-                    'BUILTIN_JS' => 'Use built in JS',
-                    'WEIGHT' => 'Order of execution',
-                    'WEIGHT_HELP' => 'To process the page contents right after *SmartyPants* use negative values.',
-                    'CDN' => [
-                        'ENABLED' => 'Use MathJax Content Delivery Network (CDN)',
-                        'ENABLED_HELP' => 'Check this box to load MathJax source from MathJax servers (recommended) or from the link you can provide below.',
-                        'URL' => 'MathJax CDN URL',
-                        'URL_HELP' => 'Enter the Mathjax CDN URL here or leave it unchanged to use the one provided by wwww.mathjax.org'
-                    ],
-                    'PROCESS' => 'Activate <code>MathJax</code> filter on the page'
-                ]
             ],
             'FRONTMATTER_ERROR_PAGE' => '---
 title: %1$s
@@ -3388,6 +3624,46 @@ Path: `%2$s`
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Veuillez configurer une adresse de \'destinataire\' dans les paramètres du Plugin ou dans le formulaire.',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Veuillez configurer une adresse \'d\'expéditeur\' dans les paramètres du Plugin ou dans le formulaire.'
+            ],
+            'PLUGINS' => [
+                'EXTERNAL_LINKS' => [
+                    'GLOBAL_CONFIG' => 'Configuration globale du plugin',
+                    'DEFAULT_CONFIG' => 'Configuration des valeurs par défaut pour les liens externes',
+                    'SPECIFIC_CONFIG' => 'Configuration globale et de pages spécifiques',
+                    'PLUGIN_STATUS' => 'Statut du plugin',
+                    'BUILTIN_CSS' => 'Utiliser les CSS intégrés',
+                    'WEIGHT' => 'Ordre d\'exécution',
+                    'EXTERNAL_LINKS' => 'Liens externes',
+                    'EXCLUDE' => [
+                        'SECTION' => 'Exclusion',
+                        'SECTION_HELP' => 'Exclure les liens avec des classes spécifiques ou des domaines comme étant reconnus comme liens externes.',
+                        'CLASSES' => 'Exclure tous les liens avec cette classe',
+                        'CLASSES_HELP' => 'Liste des classes séparées par des virgules.',
+                        'DOMAINS' => 'Une liste des domaines à exclure',
+                        'DOMAINS_HELP' => 'Liste des domaines séparés par des virgules ex : _localhost/*_  (les expressions régulières peuvent être utilisées)'
+                    ],
+                    'LINKS' => [
+                        'SECTION' => 'Liens',
+                        'SECTION_HELP' => 'Définir les liens commençant par <code>www.</code> et ceux de la liste des schémas définis comme étant des liens externes.',
+                        'WWW' => 'Liens WWW',
+                        'WWW_HELP' => 'Reconnaître automatiquement tout lien commencant par \'www.\' comme étant un lien externe.',
+                        'SCHEMES' => 'Schémas autorisés',
+                        'SCHEMES_HELP' => 'Liste des schémas autorisés'
+                    ],
+                    'PROCESS' => 'Filtrer les liens externes de la page',
+                    'TITLE' => 'Afficher le titre par défaut pour les liens externes',
+                    'TITLE_MESSAGE' => 'Ce lien va vous diriger vers un site externe. Nous ne sommes pas responsables de son contenu.',
+                    'NO_FOLLOW' => 'Ajouter <code>rel="nofollow"</code> à tous les liens externes',
+                    'TARGET' => 'Spécifier la cible dans laquelle le contenu du lien doit s\'afficher.',
+                    'TARGET_BLANK' => '_blank | Afficher dans une nouvelle fenêtre',
+                    'TARGET_SELF' => '_self | Afficher dans la même fenêtre',
+                    'TARGET_PARENT' => '_parent | Afficher dans le cadre parent (frame)',
+                    'TARGET_TOP' => '_top | Afficher dans le cadre racine',
+                    'MODE' => 'Mode',
+                    'MODE_HELP' => 'actif = analyser et procéder pour tous les liens; passif = analyser les liens mais ne pas appliquer les classes CSS',
+                    'MODE_ACTIVE' => 'Actif - Analyser et procéder pour tous les liens',
+                    'MODE_PASSIVE' => 'Passif - Analyser les liens mais ne pas appliquer les classes CSS'
+                ]
             ],
             'PLUGIN_FORM' => [
                 'NOT_VALIDATED' => 'Formulaire non validé. Un ou plusieurs champs obligatoires sont manquants.',
@@ -8652,6 +8928,6 @@ Path: `%2$s`
                 6 => 'Duminică'
             ]
         ],
-        'checksum' => 'c78ee7f3507284e52208b8b9b6888b3f'
+        'checksum' => '98c4c92d94e5fd6683bdf51e50a6348a'
     ]
 ];

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/admin/languages/zh.yaml',
-    'modified' => 1456409950,
+    'modified' => 1461330888,
     'data' => [
         'PLUGIN_ADMIN' => [
             'ADMIN_BETA_MSG' => '這是 Beta 版！如果要用在營運中請自行承擔風險…',
