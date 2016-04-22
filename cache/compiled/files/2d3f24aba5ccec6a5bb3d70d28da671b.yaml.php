@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/brianspector/Library/Mobile Documents/com~apple~CloudDocs/Documents/GitHub/grav-staging/user/plugins/simplesearch/blueprints.yaml',
-    'modified' => 1461252387,
+    'modified' => 1461330890,
     'data' => [
         'name' => 'SimpleSearch',
         'version' => '1.6.2',
