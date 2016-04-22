@@ -1,71 +1,71 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1461253039,
-    'checksum' => '99a714a521221949fd74f99b9ff81713',
+    'timestamp' => 1461321896,
+    'checksum' => '98fe73099a05ca7ad30af2cf463551d8',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1461251188
+                'modified' => 1461318238
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/ganalytics' => [
                 'file' => 'user/plugins/ganalytics/blueprints.yaml',
-                'modified' => 1461252285
+                'modified' => 1461318238
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/blueprints.yaml',
-                'modified' => 1461252353
+                'modified' => 1461318238
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/markdown-color' => [
                 'file' => 'user/plugins/markdown-color/blueprints.yaml',
-                'modified' => 1461252433
+                'modified' => 1461318238
             ],
             'plugins/mathjax' => [
                 'file' => 'user/plugins/mathjax/blueprints.yaml',
-                'modified' => 1461252309
+                'modified' => 1461318238
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1461252387
+                'modified' => 1461318238
             ]
         ]
     ],

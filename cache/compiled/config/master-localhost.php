@@ -1,105 +1,105 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1461254444,
-    'checksum' => '00268ece7c1aa5d91210bad5e61f37e0',
+    'timestamp' => 1461321896,
+    'checksum' => '27cad29ac63274146b0b281b99849341',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1461251091
+                'modified' => 1461318238
             ],
             'plugins/ganalytics' => [
                 'file' => 'user/config/plugins/ganalytics.yaml',
-                'modified' => 1461252292
+                'modified' => 1461318238
             ],
             'plugins/mathjax' => [
                 'file' => 'user/config/plugins/mathjax.yaml',
-                'modified' => 1461252322
+                'modified' => 1461318238
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1461251090
+                'modified' => 1461318238
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1461251739
+                'modified' => 1461318238
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
-                'modified' => 1461251091
+                'modified' => 1461318238
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1461253321
+                'modified' => 1461318238
             ],
             'themes/learn2' => [
                 'file' => 'user/config/themes/learn2.yaml',
-                'modified' => 1461251302
+                'modified' => 1461318238
             ]
         ],
         'system/config' => [
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'streams' => [
                 'file' => 'system/config/streams.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ]
         ],
         'user/plugins' => [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1461254427
+                'modified' => 1461318238
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1461251188
+                'modified' => 1461318238
             ],
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/ganalytics' => [
                 'file' => 'user/plugins/ganalytics/ganalytics.yaml',
-                'modified' => 1461252285
+                'modified' => 1461318238
             ],
             'plugins/langswitcher' => [
                 'file' => 'user/plugins/langswitcher/langswitcher.yaml',
-                'modified' => 1461252353
+                'modified' => 1461318238
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/markdown-color' => [
                 'file' => 'user/plugins/markdown-color/markdown-color.yaml',
-                'modified' => 1461252433
+                'modified' => 1461318238
             ],
             'plugins/mathjax' => [
                 'file' => 'user/plugins/mathjax/mathjax.yaml',
-                'modified' => 1461252309
+                'modified' => 1461318238
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1456409950
+                'modified' => 1461318238
             ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/simplesearch.yaml',
-                'modified' => 1461252387
+                'modified' => 1461318238
             ]
         ]
     ],
